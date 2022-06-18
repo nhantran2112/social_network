@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/idIVArticle"
+            android:scaleType="centerCrop" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVArticleHeading"
+            android:layout_below="@id/idIVArticle"
+            android:text="Article Heading"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:maxLines="2"
+            android:layout_margin="3dp"/>
+
+        <TextView
+            android:id="@+id/idTVSubArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVArticleHeading"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="3dp"
+            android:maxLines="3"
+            android:padding="3dp"
+            android:text="Sub Heading"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

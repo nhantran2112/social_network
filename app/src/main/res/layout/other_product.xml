@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/green_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:id="@+id/idIVProduct"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVNameProduct"
+            android:layout_below="@id/idIVProduct"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_margin="3dp"/>
+
+        <TextView
+            android:id="@+id/idTVCategoryProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="11sp"
+            android:padding="5dp"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/idTVUseforProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:text="Use for"
+            android:textSize="11sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

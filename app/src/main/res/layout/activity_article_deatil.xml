@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".article.ArticleDeatilActivity">
+
+    <LinearLayout
+        android:id="@+id/lnl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        >
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            app:drawableStartCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="Bài báo"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lnl"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/green"/>
+
+    <ScrollView
+        android:layout_below="@id/lnl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <ImageView
+                android:id="@+id/idIVArticleDeatil"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="TODO" />
+            <TextView
+                android:id="@+id/idpositionIV"
+                android:background="@drawable/custom_position_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="5/6"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Header"
+                android:id="@+id/idTVHeading"
+                android:layout_below="@+id/idIVArticleDeatil"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                />
+
+
+            <TextView
+                android:id="@+id/idTVCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVHeading"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="3dp"
+                android:maxLines="3"
+                android:padding="3dp"
+                android:text="Sub Heading"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Body"
+                android:layout_below="@id/idTVCategory"
+                android:id="@+id/idTVBody"
+                android:textSize="18sp"
+                android:padding="4dp"
+                android:layout_margin="4dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

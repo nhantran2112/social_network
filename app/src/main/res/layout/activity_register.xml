@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/green_border"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:padding="3dp"
+        app:cardCornerRadius="30dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/idIVEditReg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/idTVChangeImageReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn ảnh đại diện"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        android:padding="3dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Account">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETaccountReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Password"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETpasswordReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPassword"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Tên người dùng">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETnameReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/idbtnregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Đăng ký"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            style="?attr/materialButtonStyle"
+            android:layout_gravity="center"
+            />
+
+        <ProgressBar
+            android:id="@+id/idPB"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/custom_progressbar"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/idTVlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Đăng nhập tài khoản"
+        android:textColor="@color/green"
+        android:textStyle="italic"/>
+
+
+</LinearLayout>

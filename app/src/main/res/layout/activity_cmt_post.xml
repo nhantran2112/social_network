@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.CmtPostActivity"
+    android:background="@drawable/custom_activitycmt"
+    >
+
+    <TextView
+        android:id="@+id/idTVSub"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem bình luận"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idRVCmtPost"
+        android:layout_below="@id/idTVSub"
+        android:layout_above="@id/idVduongke"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        tools:listitem="@layout/cmt_rv_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <View
+        android:id="@+id/idVduongke"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/green" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idETAddCmtPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Nhập bình luận của bạn"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"/>
+
+
+        <TextView
+            android:id="@+id/idTVInsertCmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginBottom="5dp"
+            app:drawableEndCompat="@drawable/ic_baseline_send_24" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

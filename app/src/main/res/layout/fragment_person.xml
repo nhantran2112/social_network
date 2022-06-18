@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".person.PersonFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:id="@+id/idIVPersonDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_logo" />
+                </androidx.cardview.widget.CardView>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/idTVViewPersonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=" 500"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_baseline_remove_red_eye_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVViewPersonDetail"
+                        android:layout_centerInParent="true"
+                        android:text="Người theo dõi"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/idTVPostNPersonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=" 50"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_baseline_article_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVPostNPersonDetail"
+                        android:layout_centerInParent="true"
+                        android:text="Bai viet"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:id="@+id/idTVProdNPersonDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=" 50"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_baseline_store_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVProdNPersonDetail"
+                        android:layout_centerInParent="true"
+                        android:text="San pham"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/idTVNamePersonDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:paddingStart="15dp"
+                android:text="Thanh Ngan"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/idTVIntroPersonDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:paddingStart="15dp"
+                android:text="Introduce my self"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                tools:ignore="RtlSymmetry" />
+
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/ideditinfo"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_baseline_edit_note_24" />
+
+                <Button
+                    android:id="@+id/idbtncreatepost"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bài viết"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_baseline_post_add_24" />
+
+                <Button
+                    android:id="@+id/idbtncreateproduct"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản phẩm"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_baseline_add_business_24" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/idtablayoutperson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_baseline_article_24" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_baseline_store_24" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpagerpersondetail"
+                android:layout_width="match_parent"
+                android:layout_height="535dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    tools:context=".home.PopupCreatePostActivity">
+
+    <LinearLayout
+        android:id="@+id/lnl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        >
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:drawableStartCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="Đăng bài viết"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lnl"
+        android:background="@color/green"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CVAva"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/lnl"
+        android:padding="3dp"
+        app:cardCornerRadius="30dp">
+
+        <ImageView
+            android:id="@+id/idIVAvaCreatePost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo"
+            android:contentDescription="TODO" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnl"
+        android:text="Thanh Ngan"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/CVAva"
+        android:layout_margin="7dp"
+        android:paddingTop="3dp"
+        android:id="@+id/idTVNameCreatePost"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/idTVAddImagePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnl"
+        android:layout_alignParentEnd="true"
+        android:text="+"
+        android:textSize="25sp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+        app:drawableStartCompat="@drawable/ic_baseline_image_24" />
+
+    <EditText
+        android:id="@+id/idETTextPost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idRVImagePreview"
+        android:layout_below="@id/CVAva"
+        android:gravity="top"
+        android:hint="Chia sẽ về bí quyết của bạn nào!"
+        android:inputType="text|textMultiLine"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/idLnLBtnProg"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/image_item_post" />
+
+
+    <TextView
+        android:id="@+id/idclose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idETTextPost"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_position_iv"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_above="@id/idLnLBtnProg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginBottom="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/idLnLBtnProg"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/idBtnCreatePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng"
+            />
+
+        <ProgressBar
+            android:id="@+id/idPB"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/custom_progressbar"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
